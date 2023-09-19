@@ -27,3 +27,10 @@ public class MonthList {
 	}
 
 }
+
+/*
+ * Crea una clase Java OK
+ * que inserte en una lista ordenada los nombres de los meses del año. OK
+ * Verifica con jUnit que la lista tiene 12 posiciones, 
+ * que no es nula y que en su posición 8 contiene el nombre 'agosto'.
+ */ 
