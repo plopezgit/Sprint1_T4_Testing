@@ -2,16 +2,20 @@ package N1Exe2;
 
 public class DNICalculation {
 	
-	String DNILetter;
+	String DNILetters;
 	
 	public DNICalculation() {
-		DNILetter = "TRWAGMYFPDXBNJZSQVHLCKE";
+		DNILetters = "TRWAGMYFPDXBNJZSQVHLCKE";
+	}
+	
+	public String getDNILetters() {
+		return DNILetters;
 	}
 
 	public char getDNILetter (int DNINumber) {
-		return DNILetter.charAt(DNINumber % 23);
+		return DNILetters.charAt(DNINumber % 23);
 	}
-
+	
 }
 
 /*
