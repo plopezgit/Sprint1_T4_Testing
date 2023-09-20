@@ -1,4 +1,4 @@
-package N2Exe1;
+package N2Exe1.Test;
 
 import org.hamcrest.*;
 import org.junit.jupiter.api.Test;
