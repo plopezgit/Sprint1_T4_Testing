@@ -1,6 +1,7 @@
 package N2Exe1.Test;
 
 import org.hamcrest.*;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.hamcrest.CoreMatchers.*;
 
@@ -18,6 +19,7 @@ public class StringLength_Test{
 		};
 	}
 	
+	@DisplayName("Given a word 'mordor', check its length")
 	@Test
 	public void stringLengthSizeTest() {
 		MatcherAssert.assertThat("mordor", lenghtMethodMatcher(is(10))); 
