@@ -4,7 +4,7 @@ Level 1:
 
 **JUnit**
 
-> ##### Solution notes:
+> ##### General solution notes:
 > - It is structured a package distribution that contains the class, and another different pack that stores the test.
 > - The package that contains the class to be tested is named as {PackageWIth ClassToBeTestedName}.Test.
 > - The Class with the test use the {ClassToBeTestedName}_Test as name.
@@ -88,13 +88,19 @@ Create Java classes and/or tests that test them to demonstrate the following:
 
 An assertion that proves that the value of two integer objects is equal, and another that shows that they are not.
 
+> - uses assertThat(num1).isEqualTo(num2); and assertThat(num1).isNotEqualTo(num2);
+
 - Exercise 2
 
 An assertion that proves that the reference to one object is the same as another, and another that indicates that it is different.
 
+> - uses assertThat(pet).isEqualTo(pet2); and assertThat(pet).isNotEqualTo(pet2);
+
 - Exercise 3
 
 An assertion indicating that two arrays of integers are identical.
+
+> - uses assertThat(array1).isEqualTo(array2);	
 
 - Exercise 4
 
@@ -103,14 +109,23 @@ Create an arrayList containing several types of objects (create them too). Write
 Now check that the above list contains the objects in any order.
 Verify that, in the above list, one of the objects has been added only once. Leave one of the elements unadded, and check that the list does not contain the latter.
 
+> - uses assertThat(objList).containsSequence(int1, string1).contains(int1).contains(string1).containsOnlyOnce(int1);
+> - uses assertThat(objList).containsOnly(int1);
+
 - Exercise 5
 
 It creates a map and verifies that it contains one of the keys it adds.
+
+> - uses assertThat(flagMap).containsKey(1);
 
 - Exercise 6
 
 Throws an ArrayIndexOutOfBoundsException in any class. Create an assertion that validates that the exception is thrown when appropriate.
 
+> - uses assertThat(outOfBoundTest).returns("obj1", from(OutOfBound::returnRandomObject));
+
 - Exercise 7
 
 Create an empty Optional object. Write the correct assertion to verify that it is indeed empty. 
+
+> - uses assertThat(opt1).isEmpty();
