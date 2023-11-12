@@ -21,7 +21,10 @@ Level 1:
 >> - assertFalse(boolean)
 >> - assertEquals({expectedvalue}, {currentValue})
 > - the currentValued as reference to compare is obtained as part of the body of each test method, example:
->>- int monthListTestSize = monthListTest.addMonths().size();
+>> - int monthListTestSize = monthListTest.addMonths().size();
+> - @ParameterizedTest and @ValueSource(ints = {... , ...}) annotates public void checkGetDNILetter(int DNINumber) method to inject a set of values to the method parameter
+> - @RepeatedTest(num) annotates public void printRandomObjectException () method to execute the test repeatedly an specific number of times.
+> - uses assertThrows
 
 - Exercise 1
 
@@ -32,7 +35,9 @@ Verify with jUnit that the list has 12 positions, that it is not null and that p
 
 Create a class called CalculoDni that calculates the letter of the DNI by receiving the number as a parameter.
 Create a jUnit class that verifies its correct operation, parameterizing it so that the test receives a wide spectrum of data and validates if the calculation is correct for 10 predefined ID numbers.
+
 - Exercise 3
+
 Create a class with a method that throws an ArrayIndexOutOfBoundsException.
 Verify its correct operation with a jUnit test.
 
