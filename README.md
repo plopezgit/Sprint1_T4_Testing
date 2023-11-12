@@ -31,15 +31,35 @@ Level 1:
 Create a Java class that inserts the names of the months of the year into an ordered list.
 Verify with jUnit that the list has 12 positions, that it is not null and that position 8 contains the name 'August'.
 
+> - The Class attributes of the test icludes: 
+>> - an Object of the Class to be tested; 
+>> - and variable that will be initializated with the expected values, based on test request and premises
+> - the very first method public void setTestUp () uses @BeforeEach annotation that intances the object to be tested and init the expected variables/atributes values that will be used.
+> - Every test method within the Class is annotated with the folowing: 
+>> - @DisplayName("{GivenWhenThenTestDescription}") annotation. That support transparency and documentation.
+>> - @Test annotation that sign the method as Test.
+>> - @Order{num} annotation that set the numeric order of the test execution plan.
+> - all the test method were void and uses the static methods :
+>> - assertFalse(boolean)
+>> - assertEquals({expectedvalue}, {currentValue})
+> - the currentValued as reference to compare is obtained as part of the body of each test method, example:
+>> - int monthListTestSize = monthListTest.addMonths().size();
+
 - Exercise 2
 
 Create a class called CalculoDni that calculates the letter of the DNI by receiving the number as a parameter.
 Create a jUnit class that verifies its correct operation, parameterizing it so that the test receives a wide spectrum of data and validates if the calculation is correct for 10 predefined ID numbers.
 
+> - @ParameterizedTest and @ValueSource(ints = {... , ...}) annotates public void checkGetDNILetter(int DNINumber) method to inject a set of values to the method parameter
+
 - Exercise 3
 
 Create a class with a method that throws an ArrayIndexOutOfBoundsException.
 Verify its correct operation with a jUnit test.
+
+> - @RepeatedTest(num) annotates public void printRandomObjectException () method to execute the test repeatedly an specific number of times.
+> - uses assertThrows with a lambda expression as parameter:
+>> - assertThrows(ArrayIndexOutOfBoundsException.class, () -> outOfBoundTest.printRandomObject());
 
 
 Level 2: Hamcrest
